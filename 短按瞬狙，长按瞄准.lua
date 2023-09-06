@@ -1,4 +1,4 @@
-time = GetDate()
+time = GetDate()                                                                        --枪神纪的游戏宏
 On = false
 KG = 3                                                                                  --以鼠标键3作为开关，即中键。可以按照自己需求改成别的键位
 lastRightClickTime = 0
