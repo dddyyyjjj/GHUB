@@ -1,35 +1,35 @@
-ZU = 0    --XÖáÒÆ¶¯¾àÀë
-YO = 50   --YÖáÒÆ¶¯¾àÀë
+ZU = 0                                                   --Xè½´ç§»åŠ¨è·ç¦»ï¼Œå¸Œæœ›ä»å·¦å³ç”©å¯ä»¥è°ƒæ•´è¿™ä¸ª
+YO = 50                                                  --Yè½´ç§»åŠ¨è·ç¦»ï¼Œå¸Œæœ›æŠ¬çš„è§’åº¦é«˜å¯ä»¥æŠŠè¿™ä¸ªå€¼è°ƒå¤§
 
-KG = 5    --Êó±ê¼ü5×÷Îªºê¿ª¹Ø
-On = false --Éè¶¨³õÊ¼×´Ì¬Îª¹Ø±Õ
+KG = 5                                                   --é¼ æ ‡é”®5ä½œä¸ºå®å¼€å…³
+On = false                                               --è®¾å®šåˆå§‹çŠ¶æ€ä¸ºå…³é—­
 function OnEvent(event, arg)
-OutputLogMessage("event = %s, arg = %s\n", event, arg)  --ÏÔÊ¾Êó±ê°´¼ü×´Ì¬
-EnablePrimaryMouseButtonEvents(1)
-if (event == "MOUSE_BUTTON_PRESSED" and arg == KG) then  --Èç¹û°´ÏÂÁËKG£¬¼´¿ªÍ·Éè¶¨µÄºê¿ª¹Ø
-	On = not On                                       --ÇĞ»»OnµÄ×´Ì¬
+OutputLogMessage("event = %s, arg = %s\n", event, arg)  --æ˜¾ç¤ºé¼ æ ‡æŒ‰é”®çŠ¶æ€
+EnablePrimaryMouseButtonEvents(1)                        --å£°æ˜å¯ä»¥ç›‘å¬é¼ æ ‡å·¦é”®
+if (event == "MOUSE_BUTTON_PRESSED" and arg == KG) then  --å¦‚æœæŒ‰ä¸‹äº†KGï¼Œå³å¼€å¤´è®¾å®šçš„å®å¼€å…³
+	On = not On                                       --åˆ‡æ¢Onçš„çŠ¶æ€
 	if(On)then
-		OutputLogMessage("Kai \n")                 --Êä³ö¿ª¹ØĞÅÏ¢
+		OutputLogMessage("Kai \n")                 --è¾“å‡ºå¼€å…³ä¿¡æ¯
 	else
-		OutputLogMessage("Guan \n")                --Êä³ö¿ª¹ØĞÅÏ¢
+		OutputLogMessage("Guan \n")                --è¾“å‡ºå¼€å…³ä¿¡æ¯
 	end
 
 end
-if (event == "MOUSE_BUTTON_PRESSED" and arg == 4 and On) then  --µ±°´ÏÂÊó±ê¼ü1Ê±£¬Ö´ĞĞ×Ô¶¨Òåº¯Êıshuaipao£¨£©
+if (event == "MOUSE_BUTTON_PRESSED" and arg == 4 and On) then  --å½“æŒ‰ä¸‹é¼ æ ‡é”®4æ—¶ï¼Œæ‰§è¡Œè‡ªå®šä¹‰å‡½æ•°shuaipaoï¼ˆï¼‰
 	shuaipao()
 end
 function shuaipao()
-	for i = 0, 4 do                                  --´Ó0µ½4Ö´ĞĞ4´ÎÊó±êÒÆ¶¯ÃüÁî
-		MoveMouseRelative(ZU,-YO)                 --×óÉÏ½ÇÎª£¨0,0£©£¬ÓÒÏÂ½ÇÎª£¨65535,65535£©
+	for i = 0, 4 do                                  --ä»0åˆ°4æ‰§è¡Œ4æ¬¡é¼ æ ‡ç§»åŠ¨å‘½ä»¤
+		MoveMouseRelative(ZU,-YO)                 --åæ ‡ã€‚å·¦ä¸Šè§’ä¸ºï¼ˆ0,0ï¼‰ï¼Œå³ä¸‹è§’ä¸ºï¼ˆ65535,65535ï¼‰
 	Sleep(5)
 end
 	Sleep(9)
-	PressMouseButton(1)                              --°´ÏÂÊó±ê¼ü1
+	PressMouseButton(1)                              --æŒ‰ä¸‹é¼ æ ‡é”®1
 	Sleep(9)
-	ReleaseMouseButton(1)                            --ÊÍ·ÅÊó±ê¼ü1
+	ReleaseMouseButton(1)                            --é‡Šæ”¾é¼ æ ‡é”®1
 	Sleep(9)
 	for i = 0, 4 do
-		MoveMouseRelative(-ZU,YO)                 --»Øµ½Ô­Î»
+		MoveMouseRelative(-ZU,YO)                 --å›åˆ°åŸä½
 	Sleep(5)
 end
 end
