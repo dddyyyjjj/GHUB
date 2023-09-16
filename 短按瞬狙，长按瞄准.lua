@@ -16,7 +16,15 @@ function OnEvent(event, arg, pressCount)
 				OutputLogMessage("Guan \n")
 			end
         elseif arg == 2 and On then                                                     --如果按下的是右键
-            lastRightClickTime = GetRunningTime()                         
+		   PressKey("f")                                                        --开启爆炸射击
+		   Sleep(1)
+		   ReleaseKey("f")
+		   Sleep(15)
+		   PressKey("`")							--开启圣痕技能
+		   Sleep(1)
+		   ReleaseKey("`")
+		   Sleep(1)
+           	   lastRightClickTime = GetRunningTime()                         
 		   	
         end
     elseif event == "MOUSE_BUTTON_RELEASED" and arg == 2 and On then                     --鼠标右键松开时
